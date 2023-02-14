@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Ahmed Gamal 
 
 while [ true ]; do
     echo -e "${cyan}Please, Enter Table Name which you want to insert data :${clear}"

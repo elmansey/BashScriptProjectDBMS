@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Abdelrahman Elmansey 
 
 # get the table name and check if exist #
 while [ true ]; do

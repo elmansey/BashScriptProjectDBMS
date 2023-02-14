@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Abdelrahman Elmansey 
 
 while [ true ]; do
     echo -e "${cyan}Enter Table Name you want to delete row from them : ${clear}"

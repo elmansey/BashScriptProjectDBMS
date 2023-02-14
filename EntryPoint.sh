@@ -1,7 +1,11 @@
 #!/bin/bash
+# author : Abdelrahman Elmansey 
 
 ########################## The Project Entry Point ############################
 ################################### DBMS ######################################
+
+
+
 
 
 ## Check The DBMS Directory 
@@ -10,7 +14,6 @@ if [[ -e "DBMS" ]];then
     cd DBMS
 else 
     sudo mkdir DBMS
-    # chmod 777 DBMS
     if [[ -d "DBMS" ]];then 
         cd DBMS
     else

@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Ahmed Gamal 
 
 ######################################### create table ####################################
 
@@ -24,12 +25,12 @@ do
                     echo -e "${red}inavlid num${clear}"
                 fi
             done
-            counter=0 
+            counter=1
 
             if ! [[ -z  $columns_num ]];then 
-                while [ $counter -lt $columns_num ]
+                while [ $counter -le $columns_num ]
                 do
-                    echo -e "${cyan}Enter column $(($counter+1)) name :${clear}"
+                    echo -e "${cyan}Enter column $counter name :${clear}"
                     read  col_name
 
                     if [[ $col_name =~ ^[a-z_A-Z]+[a-zA-Z_0-9]+$  ]];then
@@ -40,7 +41,7 @@ do
 
                         case $choice in 
                         "int")
-                            if [ $counter -eq 0 ];then
+                            if [ $counter -eq 1 ];then
                                 constraint_of_col="PK"
                             else
                                 constraint_of_col="null"
@@ -54,7 +55,7 @@ do
                             break
                         ;;
                         "string")
-                            if [ $counter -eq 0 ];then
+                            if [ $counter -eq 1 ];then
                                 constraint_of_col="PK"
                             else
                                 constraint_of_col="null"
@@ -80,7 +81,7 @@ do
                 echo -e "${red}Please enter the value for columns num ${clear}"
             fi 
             # this is the outer while stopping 
-            if [[ $counter -eq $columns_num ]];then
+            if [[ $counter -gt $columns_num ]];then
                 break
             fi
         else

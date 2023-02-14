@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Ahmed Gamal 
 
 ############################# List Tables ############################
 
@@ -8,7 +9,7 @@
 echo " "
 echo -e "${magenta}=======================================${clear}(${cyan}List ${clear}${red}Databases${clear})${magenta}=======================================${clear}"
 echo " " 
-ls -F | grep "*" |cut -d " " -f1|grep "[^*]$" # grep to files [^*]$ == NOT ended with * 
+ls -F | grep "*" |cut -d " " -f1|grep "[^*]$" 
 echo " "
 count=$(ls -F | grep "*" |cut -d " " -f1|grep "[^*]$"|wc -l)
 echo -e "${yellow}The Total tables Count :${clear}" $count

@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Ahmed Gamal 
 
 echo " "
 echo -e "${magenta}=======================================${clear}(${cyan}Welcome In ${clear}${red}DBMS${clear})${magenta}=======================================${clear}"

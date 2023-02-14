@@ -1,4 +1,5 @@
 #!/bin/bash
+# author : Ahmed Gamal 
 
 while [ true ];do
     read  -p "Please Enter Your table Name , You Want to Remove it : " tableName

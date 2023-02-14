@@ -1,4 +1,6 @@
 #!/bin/bash
+# author : Ahmed Gamal 
+
 echo -e "${cyan}Please, Enter Table Name which you want to select data ${clear}"
 read table_name
 if [[ $table_name =~ ^[a-z_A-Z]+[a-zA-Z_0-9]+$ ]]; then
@@ -18,7 +20,7 @@ if [[ $table_name =~ ^[a-z_A-Z]+[a-zA-Z_0-9]+$ ]]; then
                     select cname in ${col_names[@]}; do
                         ColumnPosition=$(awk -F':' -v column=$cname '{if($1==column){print NR}}' "$table_name meta_data.txt")
                         while [ true ]; do
-                            # check if the column not in select choises
+                            # check if the column not in select choices
                             if ! [[ -z $ColumnPosition ]]; then
                                 echo -e "${cyan}Enter $cname value to select Row by it:${clear}"
                                 read value
