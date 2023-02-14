@@ -1,9 +1,10 @@
 #!/bin/bash
 
 echo " "
-echo "=======================================(Welcome In DBMS)======================================="
+echo -e "${magenta}=======================================${clear}(${cyan}Welcome In ${clear}${red}DBMS${clear})${magenta}=======================================${clear}"
 echo " "
-
+echo " "
+PS3="============ Choise Operation ============ : "
 select choise in "Create Database" "List Databases" "Connect To Databases" "Drop Database" "Exit"
 do 
     case $choise in 
@@ -19,7 +20,11 @@ do
     "Drop Database") 
         source ../DropDatabase.sh  
     ;;
-    "Exit") exit;;
-    *) echo "invalid choise try again " ;;
+    "Exit") 
+        exit;;
+    *) 
+        echo -e "${red}invalid choise try again${clear}" ;;
     esac
 done 
+
+

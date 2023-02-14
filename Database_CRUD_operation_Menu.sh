@@ -5,7 +5,8 @@
 
 
 ############### Show the select option ################
-
+echo " "
+PS3="============ Choise Operation ============ : "
 select choise in "Create Table" "List Tables" "Drop Table" "Insert into Table" "Select From Table" "Delete From Table" "Update Table" "Exit" "Back to Main Menu"
 do  
     case $choise in 
@@ -31,9 +32,31 @@ do
         source ../../UpdateFromTable.sh
     ;;
     "Back to Main Menu")
-        source ../../MainOption.sh
+        cd ../
+        PS3="============ Choise Operation ============ : "
+        select choise in "Create Database" "List Databases" "Connect To Databases" "Drop Database" "Exit"
+        do 
+            case $choise in 
+            "Create Database") 
+                source ../CreateDatabase.sh
+            ;;
+            "List Databases")
+                source ../ListDatabase.sh 
+            ;;
+            "Connect To Databases")
+                source ../ConnectToDatabase.sh  
+            ;;
+            "Drop Database") 
+                source ../DropDatabase.sh  
+            ;;
+            "Exit") 
+                exit;;
+            *) 
+                echo -e "${red}invalid choise try again${clear}" ;;
+            esac
+        done 
     ;;
     "Exit") exit;;
-    *) echo "invalid choise try again " ;;
+    *) echo -e "${red}invalid choise try again${clear}" ;;
     esac
 done 

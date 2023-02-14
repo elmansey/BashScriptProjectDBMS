@@ -1,2 +1,0 @@
-ID:int:PK
-name:string:null

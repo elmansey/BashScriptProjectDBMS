@@ -5,7 +5,7 @@
 
 
 ## Check The DBMS Directory 
-
+source colors.sh
 if [[ -e "DBMS" ]];then 
     cd DBMS
 else 
@@ -14,11 +14,12 @@ else
     if [[ -d "DBMS" ]];then 
         cd DBMS
     else
-        echo "Some Error was happen please try again :("
+        echo -e "${red}Some Error was happen please try again :(${clear}"
     fi
 fi
 
 ############### Show the select option ################
+
 source ../MainOption.sh
 
 
